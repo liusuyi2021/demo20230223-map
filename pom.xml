@@ -36,8 +36,33 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.gdal/gdal -->
+        <dependency>
+            <groupId>org.gdal</groupId>
+            <artifactId>gdal-3.6.2</artifactId>
+            <version>3.6.2</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/gdal/gdal-3.6.2.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>org.gdal</groupId>
+            <artifactId>gdal</artifactId>
+            <version>3.6.0</version>
+            <scope>compile</scope>
+            <systemPath>${project.basedir}/gdal/gdal.jar</systemPath>
+        </dependency>
     </dependencies>
-
+    <repositories>
+        <repository>
+            <id>osgeo</id>
+            <name>Open Source Geospatial Foundation Repository</name>
+            <url>https://repo.osgeo.org/repository/release/</url>
+        </repository>
+    </repositories>
     <build>
         <plugins>
             <plugin>
